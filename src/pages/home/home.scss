@@ -1,3 +1,50 @@
 page-home {
-
-}
+    .button{
+      background-color:lightgray;
+      color:black;
+    }
+    h1{
+        color: brown;
+    }
+    h2{
+        color: brown;
+    }
+    h3{
+        color: brown;
+    }
+    hr{
+        color: brown;
+        height: 3%;
+    }
+    button{
+        
+        background-color: darkgray;
+    }
+    
+    ion-input[placeholder] {
+        color:brown;
+        text-align: center
+        
+    }
+    ion-checkbox{
+        color:brown;
+        text-align: center
+    }
+    
+    ion-item{
+        text-align: center;
+    }
+    ion-content{
+        text-align: center;
+    }
+    
+    .toolbar-background{
+        text-align: center;
+        background-color:brown;
+        color:black;
+    }
+    ion-title{
+        text-align:center;
+    }
+    
+    }

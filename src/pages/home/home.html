@@ -1,14 +1,62 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+    <ion-navbar color = "orange">
+      <ion-title>
+      Coffe Ordering
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    
+        <ion-input  placeholder="Name" style="text-align: center" type="text" name="name" [(ngModel)]="name" required>
+        </ion-input>
+  <hr>
+  
+     <ion-list>
+  <h1 style="text-align: center">TOPPINGS</h1>
+      <ion-item>
+        <ion-label>Whipped Cream</ion-label>
+        <ion-checkbox  (click)="event1()" [(ngModel)]="whippedcream"></ion-checkbox>
+      </ion-item>
+    
+     
+    
+      <ion-item>
+        <ion-label>Chocolate</ion-label>
+        <ion-checkbox  (click)="event()" [(ngModel)]="chocolate"></ion-checkbox>
+      </ion-item>
+  
+      <h2 style="text-align: center"> QUANTITY</h2>
+      
+      <div id="button" style="text-align:center">
+          <button ion-button (click)="onClick1()">-</button>
+    
+       {{valueone}}
+    
+  <button ion-button (click)="onClick2()">+</button><br>
+  </div>
+  
+  <h3  style="text-align:center">Order Summary</h3>
+   <div *ngIf="display ==1">
+     <p>{{name}}</p>
+     <p>{{whippedcreammsg}}</p>
+     <p>{{chocolatemsg}}</p>
+     <p>{{Quantity}}</p>
+     <p>{{total}}</p>
+     <p>Thank You</p>
+     <p>Quantity: {{valueone}}</p>
+     <p>Total R</p>
+    </div><br>
+    
+    <div  id="button" style="text-align:center">
+    <button ion-button (click)="onClick3()" >ORDER</button><br>
+  
+    <br>
+  <button ion-button (click)= "onClick4()" >RESET</button>
+  <button ion-button (click) = "onClick5()" >EMAIL ORDER</button>
+    </div>
+  
+    </ion-list>
+  
+  </ion-content>
+  
